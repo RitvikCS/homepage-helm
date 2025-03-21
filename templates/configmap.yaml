@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "homepage.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: {{ include "homepage.name" . }}
+    helm.sh/chart: {{ include "homepage.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  kubernetes.yaml: |
+    {{ .Values.config.kubernetes.mode }}
+  settings.yaml: {{ .Values.config.settings | quote }}
+  custom.css: {{ .Values.config.custom.css | quote }}
+  custom.js: {{ .Values.config.custom.js | quote }}
+  bookmarks.yaml: |
+{{ .Values.config.bookmarks | indent 4 }}
+  services.yaml: |
+{{ .Values.config.services | indent 4 }}
+  widgets.yaml: |
+{{ .Values.config.widgets | indent 4 }}
+  docker.yaml: {{ .Values.config.docker | quote }}

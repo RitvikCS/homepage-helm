@@ -96,4 +96,4 @@ config:
 
 ## Contributing
 
-Contributions are welcome! Please feel let me know if there are any changes that should be made.
+Contributions are welcome! Please feel free and let me know if there are any changes that should be made.

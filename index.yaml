@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  homepage:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-03-24T19:44:03.514643083+05:30"
+    description: A Helm chart for deploying Homepage Dashboard
+    digest: 754c905798bbe655584ccebd03c390c035ed8319ffc6a6447335cc9ffad65188
+    icon: https://raw.githubusercontent.com/gethomepage/homepage/main/public/favicon-32x32.png
+    name: homepage
+    type: application
+    urls:
+    - https://RitvikCS.github.io/homepage-helm/homepage-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-24T19:44:03.514057105+05:30"
